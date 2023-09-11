@@ -1,6 +1,7 @@
 return {
   "folke/which-key.nvim",
-  init = function()
+  priority = 1,
+	init = function()
     vim.o.timeout = true
     vim.o.timeoutlen = 300
   end,
@@ -8,7 +9,9 @@ return {
 		local wk = require("which-key")
 		wk.register({
 			["<leader>f"] = { name = "Telescope" },
-			["<leader>g"] = { name = "Git Fugitive" },
+			["<leader>l"] = { name = "Lazy" },
+			["<leader>x"] = { name = "Fix" },
+			["<leader>g"] = { name = "Git" },
 			["gc"] = { name = "Comment" },
 			["<leader>h"] = { name = "Harpoon" },
 			["<leader>c"] = { name = "Code Actions" },
