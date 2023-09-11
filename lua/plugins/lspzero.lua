@@ -1,6 +1,7 @@
 return{
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v3.x',
+		event = "VeryLazy",
 		dependencies = {
 			"williamboman/mason.nvim",
     	"williamboman/mason-lspconfig.nvim",
