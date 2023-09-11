@@ -17,6 +17,15 @@ return{
 				lsp_zero.default_keymaps({buffer = bufnr})
 			end)
 
+			local cmp = require('cmp')
+			cmp.setup({
+				mapping = {
+					['<CR>'] = cmp.mapping.confirm({ select = true }),
+				},
+				sources = cmp.config.sources({
+					{ name = 'nvim_lsp' },
+				})
+			})
 			require('mason').setup({})
 			require('mason-lspconfig').setup({
 				ensure_installed = { "lua_ls", "phpactor" },
