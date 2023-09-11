@@ -19,7 +19,7 @@ return{
 
 			require('mason').setup({})
 			require('mason-lspconfig').setup({
-				ensure_installed = { "lua_ls" },
+				ensure_installed = { "lua_ls", "phpactor" },
 				handlers = {
 					lsp_zero.default_setup,
 				},
