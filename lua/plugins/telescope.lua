@@ -28,5 +28,6 @@ return{
 		{"<leader>fg","<cmd>Telescope live_grep<cr>",desc = "Telescope Live Grep"}, 
 		{"<leader>fb","<cmd>Telescope buffers<cr>",desc = "Telescope Buffers"}, 
 		{"<leader>fh","<cmd>Telescope help_tags<cr>",desc = "Telescope Help Tags"}, 
+		{"<leader>fk","<cmd>Telescope keymaps<cr>",desc = "Telescope Keymaps"}, 
 	},
 }
