@@ -1,8 +1,11 @@
 return {
-	"wuelnerdotexe/vim-enfocado",
+  "folke/tokyonight.nvim",
 	lazy = false,
 	priority = 1000,
 	config = function()
-		vim.cmd([[colorscheme enfocado]])
+		require('tokyonight').setup({
+			style = "night",
+		})
+		vim.cmd([[colorscheme tokyonight-night]])
 	end
 }

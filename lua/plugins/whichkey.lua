@@ -11,6 +11,7 @@ return {
 			["<leader>f"] = { name = "Telescope" },
 			["<leader>l"] = { name = "Lazy" },
 			["<leader>x"] = { name = "Fix" },
+			["<leader>d"] = { name = "DB" },
 			["<leader>g"] = { name = "Git" },
 			["gc"] = { name = "Comment" },
 			["<leader>h"] = { name = "Harpoon" },
