@@ -57,6 +57,7 @@ return{
 		require('mason').setup({})
 		require('mason-lspconfig').setup({
 			ensure_installed = {"phpactor", "lua_ls","html","cssls","tailwindcss","tsserver"},
+			automatic_installation = true,
 			handlers = {
 				lsp_zero.default_setup,
 			},
@@ -66,6 +67,14 @@ return{
 			capabilities = lsp_capabilities,
 		})
 		require('lspconfig').lua_ls.setup({
+			settings = {
+				Lua = {
+					diagnostics = {
+						-- Get the language server to recognize the `vim` global
+						globals = {'vim'},
+					},
+				},
+			},
 			capabilities = lsp_capabilities,
 		})
 		require('lspconfig').html.setup({
