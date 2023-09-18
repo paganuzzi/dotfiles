@@ -9,7 +9,8 @@ return{
 		'neovim/nvim-lspconfig',
 		'hrsh7th/nvim-cmp',
 		'hrsh7th/cmp-nvim-lsp',
-		'L3MON4D3/LuaSnip'
+		'L3MON4D3/LuaSnip',
+		'hrsh7th/cmp-buffer',
 	},
 	config = function()
 		local lsp_zero = require('lsp-zero')
@@ -27,7 +28,7 @@ return{
 				-- { name = "nvim_lsp_signature_help" },
 				-- { name = "luasnip" },
 				--     { name = "path" },
-				-- { name = "buffer" },
+				{ name = "buffer" },
 				-- { name = "nvim_lua" },
 			},
 			completion = { completeopt = 'menu,menuone,noinsert' },
@@ -64,7 +65,6 @@ return{
 		})
 
 		require('lspconfig').phpactor.setup({
-			capabilities = lsp_capabilities,
 		})
 		require('lspconfig').lua_ls.setup({
 			settings = {
@@ -75,10 +75,8 @@ return{
 					},
 				},
 			},
-			capabilities = lsp_capabilities,
 		})
 		require('lspconfig').html.setup({
-			capabilities = lsp_capabilities,
 			filetypes={'html','blade','php'},
 			init_options = {
 				configurationSection = { "html", "css", "javascript" },
@@ -90,15 +88,11 @@ return{
 			}
 		})
 		require('lspconfig').cssls.setup({
-			capabilities = lsp_capabilities,
 		})
 		require('lspconfig').tailwindcss.setup({
-			capabilities = lsp_capabilities,
 		})
 		require('lspconfig').tsserver.setup({
-			capabilities = lsp_capabilities,
 		})
-
 
 	end,
 }
