@@ -28,7 +28,7 @@ return{
 				enable_rename = true,
 				enable_close = true,
 				enable_close_on_slash = true,
-				filetypes = { "html" , "php", "blade" },
+				filetypes = { "html" , "php", "blade" ,'html', 'javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'svelte', 'vue', 'tsx', 'jsx', 'rescript','xml','markdown'},
 			}
 		})
 	end,
