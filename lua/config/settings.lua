@@ -12,4 +12,10 @@ vim.o.expandtab = false
 vim.o.showmode = false
 vim.o.termguicolors = true
 vim.o.clipboard = 'unnamedplus'
+vim.o.undofile = true
 
+-- Case-insensitive searching UNLESS \C or capital in search
+vim.o.ignorecase = true
+vim.o.smartcase = true
+
+vim.o.breakindent = true

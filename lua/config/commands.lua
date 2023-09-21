@@ -15,6 +15,8 @@ vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
 	end,
 })
 
+
+
 --Install blade parser
 local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
 parser_config.blade = {
