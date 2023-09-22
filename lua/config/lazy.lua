@@ -1,4 +1,3 @@
---TODO:mejorar lazy loading
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
@@ -20,7 +19,7 @@ require("lazy").setup({
 		-- automatically check for plugin updates
 		enabled = true,
 		concurrency = nil, ---@type number? set to 1 to check for updates very slowly
-		notify = false, -- get a notification when new updates are found
+		notify = true, -- get a notification when new updates are found
 		frequency = 21600, -- check for updates every hour
 	},
 })

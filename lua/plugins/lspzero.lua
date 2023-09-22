@@ -2,7 +2,7 @@ return {
 	"VonHeikemen/lsp-zero.nvim",
 	branch = "v3.x",
 	ft = { "php" },
-	event = "VeryLazy",
+	event = "BufAdd",
 	dependencies = {
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",

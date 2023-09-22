@@ -1,9 +1,10 @@
 return {
-	'echasnovski/mini.comment',
+	"echasnovski/mini.comment",
 	dependencies = {
-		{ 'echasnovski/mini.nvim', version = '*' },
+		{ "echasnovski/mini.nvim", version = "*" },
 	},
-	version = '*',
+	event = "BufAdd",
+	version = "*",
 	setup = true,
 	opts = {
 		options = {
@@ -24,13 +25,13 @@ return {
 		mappings = {
 			-- Toggle comment (like `gcip` - comment inner paragraph) for both
 			-- Normal and Visual modes
-			comment = 'gc',
+			comment = "gc",
 
 			-- Toggle comment on current line
-			comment_line = 'gcc',
+			comment_line = "gcc",
 
 			-- Define 'comment' textobject (like `dgc` - delete whole comment block)
-			textobject = 'gc',
+			textobject = "gc",
 		},
 
 		-- Hook functions to be executed at certain stage of commenting
@@ -40,5 +41,5 @@ return {
 			-- After successful commenting. Does nothing by default.
 			post = function() end,
 		},
-	}
+	},
 }

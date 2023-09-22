@@ -1,7 +1,8 @@
 return {
-	'akinsho/toggleterm.nvim',
+	"akinsho/toggleterm.nvim",
 	version = "*",
-	config = function ()
+	cmd = "Toggleterm",
+	config = function()
 		require("toggleterm").setup({
 			open_mapping = [[<F12>]],
 			insert_mappings = true,
