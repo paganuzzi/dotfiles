@@ -10,4 +10,4 @@ vim.api.nvim_set_keymap("i", "<C-s>", "<Esc>:w <cr>", { silent = true, noremap =
 vim.api.nvim_set_keymap("n", "<leader>l", ":Lazy  <cr>", { desc = "Lazy" })
 
 --Cambio de pestaña
-vim.keymap.set({ "n", "t" }, "<Tab><Tab>", ":tabNext <cr>", { desc = "Cambio de pestaña", silent = true })
+vim.keymap.set({ "n" }, "<Tab><Tab>", ":tabNext <cr>", { desc = "Cambio de pestaña", silent = true })
