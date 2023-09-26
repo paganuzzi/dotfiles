@@ -27,6 +27,44 @@ return {
 		require("luasnip.loaders.from_vscode").lazy_load()
 		luasnip.config.setup({})
 
+		require("mason").setup({})
+		require("mason-lspconfig").setup({
+			ensure_installed = { "phpactor", "lua_ls", "html", "cssls", "tailwindcss", "tsserver" },
+			automatic_installation = true,
+			handlers = {
+				lsp_zero.default_setup,
+			},
+		})
+
+		require("lspconfig").phpactor.setup({})
+		require("lspconfig").lua_ls.setup({
+			settings = {
+				Lua = {
+					telemetry = { enable = false },
+					workspace = {
+						checkThirdParty = false,
+					},
+					completion = {
+						callSnippet = "Replace",
+					},
+				},
+			},
+		})
+		require("lspconfig").html.setup({
+			filetypes = { "html", "blade", "php" },
+			init_options = {
+				configurationSection = { "html", "css", "javascript" },
+				embeddedLanguages = {
+					css = true,
+					javascript = true,
+				},
+				provideFormatter = true,
+			},
+		})
+		require("lspconfig").cssls.setup({})
+		require("lspconfig").tailwindcss.setup({})
+		require("lspconfig").tsserver.setup({})
+
 		cmp.setup({
 			sources = {
 				{ name = "nvim_lsp" },
@@ -55,39 +93,5 @@ return {
 				end,
 			},
 		})
-
-		require("mason").setup({})
-		require("mason-lspconfig").setup({
-			ensure_installed = { "phpactor", "lua_ls", "html", "cssls", "tailwindcss", "tsserver" },
-			automatic_installation = true,
-			handlers = {
-				lsp_zero.default_setup,
-			},
-		})
-
-		require("lspconfig").phpactor.setup({})
-		require("lspconfig").lua_ls.setup({
-			settings = {
-				Lua = {
-					completion = {
-						callSnippet = "Replace",
-					},
-				},
-			},
-		})
-		require("lspconfig").html.setup({
-			filetypes = { "html", "blade", "php" },
-			init_options = {
-				configurationSection = { "html", "css", "javascript" },
-				embeddedLanguages = {
-					css = true,
-					javascript = true,
-				},
-				provideFormatter = true,
-			},
-		})
-		require("lspconfig").cssls.setup({})
-		require("lspconfig").tailwindcss.setup({})
-		require("lspconfig").tsserver.setup({})
 	end,
 }
