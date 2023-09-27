@@ -18,8 +18,8 @@ require("lazy").setup({
 	checker = {
 		-- automatically check for plugin updates
 		enabled = true,
-		concurrency = nil, ---@type number? set to 1 to check for updates very slowly
-		notify = true, -- get a notification when new updates are found
-		frequency = 21600, -- check for updates every hour
+		concurrency = nil,
+		notify = true,
+		frequency = 3600,
 	},
 })

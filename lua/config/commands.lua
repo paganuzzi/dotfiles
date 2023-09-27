@@ -3,6 +3,14 @@ vim.api.nvim_create_user_command("Guardar", function()
 	vim.cmd("<Esc>:w <cr>")
 end, {})
 
+--highlight yank
+vim.api.nvim_create_autocmd("TextYankPost", {
+	group = vim.api.nvim_create_augroup("YankCommands", {}),
+	callback = function()
+		vim.highlight.on_yank({ higroup = "IncSearch", timeout = 150 })
+	end,
+})
+
 --Setea el filetype a "blade" cuando el archivo termina en .blade.php
 vim.api.nvim_create_augroup("BladeFiltypeRelated", {})
 vim.api.nvim_create_autocmd({ "BufNewFile", "BufRead" }, {
