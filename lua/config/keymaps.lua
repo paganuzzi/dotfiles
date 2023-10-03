@@ -11,3 +11,13 @@ vim.api.nvim_set_keymap("n", "<leader>l", ":Lazy  <cr>", { desc = "Lazy" })
 
 --Cambio de pestaña
 vim.keymap.set({ "n" }, "<Tab><Tab>", ":tabNext <cr>", { desc = "Cambio de pestaña", silent = true })
+
+--Toggleterm
+vim.keymap.set("n", "<leader>tts", ":TermSelect <cr>", { desc = "ToggleTerm Select", noremap = true, silent = true })
+vim.keymap.set("n", "<leader>ttt", ":ToggleTerm <cr>", { desc = "ToggleTerm Toggle", noremap = true, silent = true })
+vim.keymap.set(
+	"n",
+	"<leader>ttr",
+	":ToggleTermSetName <cr>",
+	{ desc = "ToggleTerm Rename", noremap = true, silent = true }
+)

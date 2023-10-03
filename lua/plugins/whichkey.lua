@@ -16,6 +16,7 @@ return {
 			["<leader>h"] = { name = "Harpoon" },
 			["<leader>c"] = { name = "Code Actions" },
 			["<leader>t"] = { name = "Test" },
+			["<leader>tt"] = { name = "ToggleTerm" },
 		})
 	end,
 	opts = {
