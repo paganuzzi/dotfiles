@@ -10,6 +10,10 @@ return {
 			insert_mappings = true,
 			terminal_mappings = true,
 			direction = "horizontal",
+			float_opts = {
+				border = "single",
+				winblend = 3,
+			},
 		})
 	end,
 }
