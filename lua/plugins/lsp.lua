@@ -33,10 +33,25 @@ return {
 		end
 
 		require("neodev").setup()
-		require("lspconfig").html.setup({})
-		require("lspconfig").cssls.setup({})
-		require("lspconfig").tailwindcss.setup({})
-		require("lspconfig").tsserver.setup({})
+
+		--html capabilities
+		local capabilities = vim.lsp.protocol.make_client_capabilities()
+		capabilities.textDocument.completion.completionItem.snippetSupport = true
+
+		require("lspconfig").html.setup({
+			filetypes = { "html", "php", "js" },
+			on_attach = on_attach,
+			capabilities = capabilities,
+		})
+		require("lspconfig").cssls.setup({
+			on_attach = on_attach,
+		})
+		require("lspconfig").tailwindcss.setup({
+			on_attach = on_attach,
+		})
+		require("lspconfig").tsserver.setup({
+			on_attach = on_attach,
+		})
 		require("lspconfig").phpactor.setup({
 			on_attach = on_attach,
 		})
