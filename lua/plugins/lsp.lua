@@ -39,7 +39,7 @@ return {
 		capabilities.textDocument.completion.completionItem.snippetSupport = true
 
 		require("lspconfig").html.setup({
-			filetypes = { "html", "php", "js" },
+			filetypes = { "html", "php", "js", "blade" },
 			on_attach = on_attach,
 			capabilities = capabilities,
 		})
@@ -47,6 +47,7 @@ return {
 			on_attach = on_attach,
 		})
 		require("lspconfig").tailwindcss.setup({
+			filetypes = { "blade" },
 			on_attach = on_attach,
 		})
 		require("lspconfig").tsserver.setup({
