@@ -4,7 +4,7 @@ return {
 	config = function()
 		vim.g["test#strategy"] = "neovim"
 		vim.g["test#neovim#term_position"] = "vert botright 60"
-		vim.g["test#php#phpunit#executable"] = "php artisan test"
+		vim.g["test#php#phpunit#executable"] = "vendor/bin/phpunit"
 	end,
 	keys = {
 		{ "<leader>tn", ":TestNearest<CR>", desc = "Test Nearest", silent = true },
